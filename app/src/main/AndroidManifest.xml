@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.mixail_akulov.a11_navigationactivity">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.11_NavigationActivity"
+        tools:targetApi="31">
+
+        <activity
+            android:name="ru.mixail_akulov.a11_navigationactivity.MenuActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BoxActivity"
+            android:label="@string/box"
+            android:parentActivityName="ru.mixail_akulov.a11_navigationactivity.BoxSelectionActivity" />
+        <activity
+            android:name="ru.mixail_akulov.a11_navigationactivity.OptionsActivity"
+            android:label="@string/options"
+            android:parentActivityName="ru.mixail_akulov.a11_navigationactivity.MenuActivity" />
+        <activity
+            android:name="ru.mixail_akulov.a11_navigationactivity.BoxSelectionActivity"
+            android:label="@string/select_box"
+            android:parentActivityName="ru.mixail_akulov.a11_navigationactivity.MenuActivity" />
+        <activity
+            android:name="ru.mixail_akulov.a11_navigationactivity.AboutActivity"
+            android:label="@string/about"
+            android:parentActivityName="ru.mixail_akulov.a11_navigationactivity.MenuActivity" />
+    </application>
+
+</manifest>
